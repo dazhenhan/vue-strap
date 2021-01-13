@@ -717,9 +717,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return NodeListJS(list, owner);
 	}
 	
-	var exceptions = ['join', 'copyWithin', 'fill', 'find', 'forEach', 'xe'];
+	var exceptions = ['join', 'copyWithin', 'fill', 'find', 'forEach'];
 	(0, _getOwnPropertyNames2.default)(ArrayProto).forEach(function (key) {
-	  if (!~exceptions.indexOf(key) && NL[key] === undefined) {
+	  if (key.indexOf('xe') !== 0 && !~exceptions.indexOf(key) && NL[key] === undefined) {
 	    NL[key] = ArrayProto[key];
 	  }
 	});
