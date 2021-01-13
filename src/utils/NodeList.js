@@ -299,7 +299,7 @@ function flatten (arr, owner) {
   return NodeListJS(list, owner)
 }
 
-var exceptions = ['join', 'copyWithin', 'fill', 'find', 'forEach']
+var exceptions = ['join', 'copyWithin', 'fill', 'find', 'forEach', 'xe']
 Object.getOwnPropertyNames(ArrayProto).forEach(key => {
   if (!~exceptions.indexOf(key) && NL[key] === undefined) {
     NL[key] = ArrayProto[key]
